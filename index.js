@@ -1,5 +1,13 @@
+//[3,7,12,8],15
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(let i = 0; i < array.length;i++){
+  const complement = target -array[i];
+  for(let j = i +1;j< array.length; j++){
+    if (array[j]===complement)return true;
+  }
+}
+return false;
 }
 
 /* 
@@ -8,7 +16,9 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
-*/
+  //iterate through each number in the array.
+//if any pair add up to the target return true
+//else there is no pair that add up to the target return flase.
 
 /*
   Add written explanation of your solution here
